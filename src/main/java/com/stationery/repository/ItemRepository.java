@@ -32,6 +32,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
             "FROM Item i")
     List<Object[]> findAllItemsWithStockCount();
 
-    // Check if the item has inventory entries
-    boolean existsByIdAndInventoriesSizeGreaterThan(Integer id, int size);
+    // Check if the item has inventory entries - updated for Spring Boot 3
+    @Query("SELECT CASE WHEN COUNT(i) > 0 THEN true ELSE false END FROM Item item JOIN item.inventories i WHERE item.id = :id")
+    boolean hasInventories(@Param("id") Integer id);
 }
