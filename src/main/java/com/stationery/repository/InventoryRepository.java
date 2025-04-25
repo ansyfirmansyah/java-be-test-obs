@@ -1,7 +1,6 @@
 package com.stationery.repository;
 
 import com.stationery.entity.Inventory;
-import com.stationery.enums.InventoryType;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,13 +16,7 @@ public interface InventoryRepository extends JpaRepository<Inventory, Integer> {
 
     List<Inventory> findByItemId(Integer itemId);
 
-    List<Inventory> findByType(InventoryType type);
-
     Page<Inventory> findByItemId(Integer itemId, Pageable pageable);
-
-    Page<Inventory> findByType(InventoryType type, Pageable pageable);
-
-    List<Inventory> findByOrderId(UUID orderId);
 
     void deleteByOrderId(UUID orderId);
 

@@ -1,5 +1,3 @@
--- noinspection SqlNoDataSourceInspectionForFile
-
 -- Initial Items Data
 INSERT INTO item (id, name, price) VALUES (1, 'Pensil 2B', 2500.0);
 INSERT INTO item (id, name, price) VALUES (2, 'Buku Tulis A5', 5000.0);
@@ -23,3 +21,7 @@ INSERT INTO inventory (id, item_id, qty, type, order_id) VALUES (7, 7, 500, 'T',
 INSERT INTO inventory (id, item_id, qty, type, order_id) VALUES (8, 8, 60, 'T', NULL);
 INSERT INTO inventory (id, item_id, qty, type, order_id) VALUES (9, 9, 45, 'T', NULL);
 INSERT INTO inventory (id, item_id, qty, type, order_id) VALUES (10, 10, 30, 'T', NULL);
+
+-- Reset sequences to continue from our initial data
+ALTER TABLE item ALTER COLUMN id RESTART WITH 11;
+ALTER TABLE inventory ALTER COLUMN id RESTART WITH 11;

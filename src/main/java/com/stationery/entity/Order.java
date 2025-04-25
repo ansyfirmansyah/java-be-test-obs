@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "orders") // Using "orders" as "order" is a reserved keyword in SQL
+@Table(name = "orders") // Using "orders" karena "order" adalah reserved keyword di SQL
 @Data
 @Builder
 @NoArgsConstructor

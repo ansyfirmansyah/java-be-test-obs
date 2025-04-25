@@ -41,3 +41,9 @@ stationery-store/
 ├── pom.xml                # Maven build config
 └── README.md              # Project documentation
 ```
+
+### Catatan
+1. Pagination di Spring Boot dimulai dari 0 (zero-based) 
+karena mengikuti konvensi dari Java dan banyak framework pengembangan software.
+Spring Data menggunakan Pageable dengan parameter page yang merepresentasikan nomor halaman (dimulai dari 0)
+Jadi page=0 adalah halaman pertama, page=1 adalah halaman kedua, dan seterusnya

@@ -37,8 +37,8 @@ public class Inventory {
     @Column(nullable = false)
     private InventoryType type;
 
-    // Order ID field - nullable for top-up inventory transactions,
-    // but required for withdrawal transactions associated with orders
+    // Order ID field - nullable untuk top-up transaksi inventory,
+    // tapi wajib untuk withdrawal transaction yang berelasi dengan order
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
