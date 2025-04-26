@@ -17,7 +17,6 @@ Backend microservice sederhana untuk mengelola inventory dan order toko alat tul
 - Validasi input
 - Logging
 - Unit testing dengan JUnit
-- Docker containerization
 
 ## Struktur Project
 
@@ -36,8 +35,6 @@ stationery-store/
 │   │   └── util/          # Utility classes
 │   ├── resources/         # Properties dan configurations
 │   └── test/              # Unit tests
-├── Dockerfile             # Docker build config
-├── docker-compose.yml     # Docker compose config
 ├── pom.xml                # Maven build config
 └── README.md              # Project documentation
 ```
